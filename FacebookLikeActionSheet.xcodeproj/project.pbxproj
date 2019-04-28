@@ -15,6 +15,9 @@
 		27F6A9D0227647960034DC19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27F6A9CE227647960034DC19 /* LaunchScreen.storyboard */; };
 		27F6A9DB227647970034DC19 /* FacebookLikeActionSheetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6A9DA227647970034DC19 /* FacebookLikeActionSheetTests.swift */; };
 		27F6A9E6227647970034DC19 /* FacebookLikeActionSheetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6A9E5227647970034DC19 /* FacebookLikeActionSheetUITests.swift */; };
+		27F6A9F4227647DC0034DC19 /* ActionSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6A9F3227647DC0034DC19 /* ActionSheetViewController.swift */; };
+		27F6A9F72276484D0034DC19 /* ActionSheetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F6A9F52276484D0034DC19 /* ActionSheetTableViewCell.swift */; };
+		27F6A9F82276484D0034DC19 /* ActionSheetTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27F6A9F62276484D0034DC19 /* ActionSheetTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		27F6A9E1227647970034DC19 /* FacebookLikeActionSheetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookLikeActionSheetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F6A9E5227647970034DC19 /* FacebookLikeActionSheetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookLikeActionSheetUITests.swift; sourceTree = "<group>"; };
 		27F6A9E7227647970034DC19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27F6A9F3227647DC0034DC19 /* ActionSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetViewController.swift; sourceTree = "<group>"; };
+		27F6A9F52276484D0034DC19 /* ActionSheetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionSheetTableViewCell.swift; sourceTree = "<group>"; };
+		27F6A9F62276484D0034DC19 /* ActionSheetTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionSheetTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,9 @@
 				27F6A9CE227647960034DC19 /* LaunchScreen.storyboard */,
 				27F6A9D1227647960034DC19 /* Info.plist */,
 				27F6A9C9227647930034DC19 /* FacebookLikeActionSheet.xcdatamodeld */,
+				27F6A9F3227647DC0034DC19 /* ActionSheetViewController.swift */,
+				27F6A9F52276484D0034DC19 /* ActionSheetTableViewCell.swift */,
+				27F6A9F62276484D0034DC19 /* ActionSheetTableViewCell.xib */,
 			);
 			path = FacebookLikeActionSheet;
 			sourceTree = "<group>";
@@ -235,6 +244,7 @@
 				27F6A9D0227647960034DC19 /* LaunchScreen.storyboard in Resources */,
 				27F6A9CD227647960034DC19 /* Assets.xcassets in Resources */,
 				27F6A9C8227647930034DC19 /* Main.storyboard in Resources */,
+				27F6A9F82276484D0034DC19 /* ActionSheetTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F6A9F4227647DC0034DC19 /* ActionSheetViewController.swift in Sources */,
+				27F6A9F72276484D0034DC19 /* ActionSheetTableViewCell.swift in Sources */,
 				27F6A9C5227647930034DC19 /* ViewController.swift in Sources */,
 				27F6A9C3227647930034DC19 /* AppDelegate.swift in Sources */,
 				27F6A9CB227647930034DC19 /* FacebookLikeActionSheet.xcdatamodeld in Sources */,

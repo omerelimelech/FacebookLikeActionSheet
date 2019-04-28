@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FacebookLikeActionSheet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGb-ZL-ojd">
+                                <rect key="frame" x="178.5" y="438" width="57" height="30"/>
+                                <state key="normal" title="clickMe!"/>
+                                <connections>
+                                    <action selector="btnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0WX-I1-cPy"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="eGb-ZL-ojd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bTy-mN-VZS"/>
+                            <constraint firstItem="eGb-ZL-ojd" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="tww-F5-aYZ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="1JY-D1-xpM" kind="show" identifier="showActionSheet" id="cvd-hf-aEl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Action Sheet View Controller-->
+        <scene sceneID="bxh-nS-Lrs">
+            <objects>
+                <viewController storyboardIdentifier="ActionTableViewController" modalPresentationStyle="overCurrentContext" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1JY-D1-xpM" customClass="ActionSheetViewController" customModule="FacebookLikeActionSheet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GWZ-qG-MKd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NqX-22-wx3">
+                                <rect key="frame" x="0.0" y="862" width="414" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="nKm-Nu-PNc"/>
+                                </constraints>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Miq-5b-jUi">
+                                <rect key="frame" x="169" y="849" width="72" height="5"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="C5a-a0-PNa"/>
+                                    <constraint firstAttribute="width" constant="72" id="eBX-PH-Wc2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Pa5-Bm-5ih" firstAttribute="trailing" secondItem="NqX-22-wx3" secondAttribute="trailing" id="Eko-Bo-QLk"/>
+                            <constraint firstItem="Miq-5b-jUi" firstAttribute="centerX" secondItem="Pa5-Bm-5ih" secondAttribute="centerX" constant="-2" id="GBF-QE-dqP"/>
+                            <constraint firstItem="NqX-22-wx3" firstAttribute="top" secondItem="Miq-5b-jUi" secondAttribute="bottom" constant="8" id="JqQ-Qz-F6o"/>
+                            <constraint firstItem="Pa5-Bm-5ih" firstAttribute="bottom" secondItem="NqX-22-wx3" secondAttribute="bottom" id="U8E-z8-8Ww"/>
+                            <constraint firstItem="NqX-22-wx3" firstAttribute="leading" secondItem="Pa5-Bm-5ih" secondAttribute="leading" id="uZH-lY-dwr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Pa5-Bm-5ih"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="NqX-22-wx3" id="ast-tt-At5"/>
+                        <outlet property="tableViewHeight" destination="nKm-Nu-PNc" id="msj-Bi-TRn"/>
+                        <outlet property="topIndicator" destination="Miq-5b-jUi" id="rbP-sd-zN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aYB-5V-vB8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1414.4927536231885" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>

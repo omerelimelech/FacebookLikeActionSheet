@@ -10,15 +10,48 @@ import UIKit
 
 class ActionSheetTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var iconImageView: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var expLabel: UILabel!
+    
+    @IBOutlet weak var containerView: UIView!
+   
+    @IBOutlet weak var button: UIButton!
+    
+    var item: ActionItem?{
+        didSet{
+            guard let item = item else {return}
+            self.iconImageView.image = UIImage(named: item.iconName ?? "")
+            self.titleLabel.text = item.titleString ?? ""
+            self.expLabel.text = item.expString ?? ""
+            button.addTarget(item.target, action: item.selector!, for: .touchUpInside)
+            
+            
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        button.removeTarget(nil, action: nil, for: .touchUpInside)
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
+    
+}
+
+
+struct ActionItem {
+    var iconName: String?
+    var titleString: String?
+    var expString: String?
+    var target: Any?
+    var selector: Selector?
     
 }

@@ -15,6 +15,12 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func btnClicked(_ sender: UIButton) {
+        guard let actionVc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ActionTableViewController") as? ActionSheetViewController else {return}
+        
+        
+        self.present(actionVc, animated: true, completion: nil)
+    }
+    
 }
 
