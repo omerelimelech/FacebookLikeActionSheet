@@ -47,11 +47,4 @@ class ActionSheetTableViewCell: UITableViewCell {
 }
 
 
-struct ActionItem {
-    var iconName: String?
-    var titleString: String?
-    var expString: String?
-    var target: Any?
-    var selector: Selector?
-    
-}
+
