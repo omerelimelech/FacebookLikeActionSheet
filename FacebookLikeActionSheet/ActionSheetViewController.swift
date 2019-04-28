@@ -30,7 +30,7 @@ class ActionSheetViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         setupTableView()
-       
+        setupUi()
         
         
     }
