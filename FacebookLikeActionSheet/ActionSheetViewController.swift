@@ -17,7 +17,7 @@ class ActionSheetViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var topIndicator: UIView!
     var dataSource = [
-        ActionItem(iconName: "note", titleString: "Title 1", expString: "description 1sdfsdfsdfsdfsdfsdfsdfsdf1sdfsdfsdfsdfsdfsdfsdfsdf1sdfsdfsdfsdfsdfsdfsdfsdf1sdfsdfsdfsdfsdfsdfsdfsdf1sdfsdfsdfsdfsdfsdfsdfsdf", target: self, selector: #selector(btn1Pressed)),
+        ActionItem(iconName: "note", titleString: "Title 1", expString: "description very very very very very very very very very very very very very very very very long", target: self, selector: #selector(btn1Pressed)),
         ActionItem(iconName: "note", titleString: "Title 2", expString: "description 2", target: self, selector: #selector(btn2Pressed)),
         ActionItem(iconName: "note", titleString: "Title 3", expString: "description 3", target: self, selector: #selector(btn3Pressed)),
        ActionItem(iconName: "note", titleString: "Title 3", expString: "description 3", target: self, selector: #selector(btn3Pressed)),
